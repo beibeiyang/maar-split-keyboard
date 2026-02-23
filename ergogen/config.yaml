@@ -48,7 +48,7 @@ points:
             column_net: P011
         sixth:
           key:
-            stagger: -3.0
+            stagger: -1.8
             column_net: P017
       rows:
         mod:
@@ -256,6 +256,7 @@ pcbs:
           hotswap: true
           choc_v1_support: false
           choc_v2_support: true
+          include_stabilizer_pad: false
           from: "{{column_net}}"
           to: "{{colrow}}"
         adjust:
@@ -316,15 +317,15 @@ pcbs:
         params:
           orientation: up
         where:
-          ref: matrix_sixth_num
-          shift: [-9, -1.5]
+          ref: matrix_fifth_num
+          shift: [10.5, -3.71]
           rotate: -180.0
       # Battery jack
       jstph:
         what: jstph
         where:
           ref: matrix_fourth_home
-          shift: [-7, 5.5]
+          shift: [-7, 6]
           rotate: 90
         params:
           side: B
@@ -383,12 +384,12 @@ pcbs:
         what: text
         where: &textWhere
           ref: matrix_fourth_num
-          shift: [-8.7, 5.5]
+          shift: [-6.5, 5.5]
         params: &textParams
           text: Maar
           justify: left
           h_size: 3.0
-          v_size: 3.0
+          v_size: 3.5
           thickness: 0.4
   right:
     template: kicad8
@@ -405,6 +406,7 @@ pcbs:
           hotswap: true
           choc_v1_support: false
           choc_v2_support: true
+          include_stabilizer_pad: false
           from: "{{column_net}}"
           to: "{{colrow}}"
         adjust:
@@ -446,8 +448,8 @@ pcbs:
         params:
           orientation: up
         where:
-          ref: mirror_matrix_sixth_num
-          shift: [-9, -1.5]
+          ref: mirror_matrix_fifth_num
+          shift: [10.5, -3.71]
       # Battery jack
       jstph:
         what: jstph
@@ -512,12 +514,12 @@ pcbs:
         what: text
         where: &textWhere
           ref: mirror_matrix_fourth_num
-          shift: [8.7, 5.5]
+          shift: [6.5, 5.5]
         params: &textParams
           text: Maar
           justify: left
           h_size: 3.0
-          v_size: 3.0
+          v_size: 3.5
           thickness: 0.4
 cases:
   plate:
