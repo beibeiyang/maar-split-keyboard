@@ -242,6 +242,7 @@ outlines:
       name: keys
 pcbs:
   left:
+    template: kicad8
     outlines:
       main:
         outline: board_left
@@ -377,19 +378,20 @@ pcbs:
         where:
           ref: matrix_fourth_bottom
           shift: [-pushX, pushY]
-      # Write "Caldera" on the PCB
+      # Write "Maar" on the PCB
       front_text: &text
         what: text
         where: &textWhere
           ref: matrix_fourth_num
           shift: [-8.7, 5.5]
         params: &textParams
-          text: Caldera
+          text: Maar
           justify: left
           h_size: 3.0
           v_size: 3.0
           thickness: 0.4
   right:
+    template: kicad8
     outlines:
       main:
         outline: board_right
@@ -505,14 +507,14 @@ pcbs:
         where:
           ref: mirror_matrix_third_bottom
           shift: [pushX, pushY]
-      # Write "Caldera" on the PCB
+      # Write "Maar" on the PCB
       front_text: &text
         what: text
         where: &textWhere
           ref: mirror_matrix_fourth_num
           shift: [8.7, 5.5]
         params: &textParams
-          text: Caldera
+          text: Maar
           justify: left
           h_size: 3.0
           v_size: 3.0

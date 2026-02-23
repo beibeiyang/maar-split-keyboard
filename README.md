@@ -1,12 +1,12 @@
-# Caldera Choc V2 Keyboard
+# Maar Split Keyboard
 
-A split ergonomic keyboard based on [christianselig/caldera-keyboard](https://github.com/christianselig/caldera-keyboard), adapted for **Kailh Choc V2 (PG1353)** switches — specifically the [Kailh Purple Iris Silent Mini Low Profile Switch](https://ymdkey.com/products/kailh-purple-iris-silent-mini-low-profile-switches-linear-fast-actuation-3-pin-for-hitbox-low-profile-keyboards) (linear, silent, 30 gf, 0.8 mm actuation, 1.8 mm total travel).
+A split ergonomic keyboard based on [christianselig/caldera-keyboard](https://github.com/christianselig/caldera-keyboard), adapted for **Kailh Choc V2 (PG1353)** switches. I personally use the [Kailh Purple Iris Silent Mini Low Profile Switch](https://ymdkey.com/products/kailh-purple-iris-silent-mini-low-profile-switches-linear-fast-actuation-3-pin-for-hitbox-low-profile-keyboards) (linear, silent, 30 gf, 0.8 mm actuation, 1.8 mm total travel).
 
 ## Differences from the original Caldera
 
 | | Original Caldera | This project |
 |---|---|---|
-| Switch | Kailh Choc V1 (PG1350) | Kailh Choc V2 / Purple Iris (PG1353) |
+| Switch | Kailh Choc V1 (PG1350) | Kailh Choc V2 (PG1353) |
 | Switch footprint | ergogen built-in `choc` | ceoloide `switch_choc_v1_v2` (V2-only) |
 | Hotswap | Yes | Yes |
 
@@ -26,7 +26,8 @@ npm install -g ergogen
 Run ergogen on the **directory** (not the yaml file directly) so it picks up the custom footprints:
 
 ```bash
-ergogen ergogen/ -o ergogen/output
+cd ergogen
+ergogen .
 ```
 
 Output files land in `ergogen/output/`:
