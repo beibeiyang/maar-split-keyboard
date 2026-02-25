@@ -23,20 +23,25 @@ Requires [Ergogen](https://ergogen.cache.works/) v4:
 npm install -g ergogen
 ```
 
-Run ergogen on the **directory** (not the yaml file directly) so it picks up the custom footprints:
+The `footprints/` directory is shared via a symlink. After cloning, create it if it doesn't exist:
 
 ```bash
-cd ergogen
-ergogen .
+ln -s ../footprints ergogen/nice_nano/footprints
 ```
 
-Output files land in `ergogen/output/`:
-- `ergogen/output/pcbs/left.kicad_pcb` and `ergogen/output/pcbs/right.kicad_pcb` — open in KiCad
-- `ergogen/output/outlines/` — DXF outlines for case/plate cutting
-- `ergogen/output/cases/plate.jscad` — plate model
+Run ergogen from the variant subdirectory so it picks up the config and footprints:
+
+```bash
+cd ergogen/nice_nano && ergogen .
+```
+
+Output files land in the respective `output/` subdirectory:
+- `output/pcbs/left.kicad_pcb` and `output/pcbs/right.kicad_pcb` — open in KiCad
+- `output/outlines/` — DXF outlines for case/plate cutting
+- `output/cases/plate.jscad` — plate model
 
 ## Credits
 
 - **[christianselig/caldera-keyboard](https://github.com/christianselig/caldera-keyboard)** — original Caldera keyboard design, layout, PCB config, and custom footprints (`EVQPUC.js`, `mountinghole.js`, `nice_nano.js`, `text.js`). Licensed under the terms of that project.
-- **[ceoloide/ergogen-footprints](https://github.com/ceoloide/ergogen-footprints)** — `switch_choc_v1_v2.js` footprint supporting Kailh Choc V1 and V2 switches. Licensed under [CC-BY-NC-SA-4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+- **[ceoloide/ergogen-footprints](https://github.com/ceoloide/ergogen-footprints)** — `switch_choc_v1_v2.js` footprint. Licensed under [CC-BY-NC-SA-4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 - **[Ergogen](https://github.com/ergogen/ergogen)** — keyboard layout generator framework.
